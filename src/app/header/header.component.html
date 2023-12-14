@@ -2,7 +2,7 @@
 <header class="site-header">
     <div class="site-identity">
       <a href="#"><img src="../../assets/store.jpg" alt="TP2 : Marketplace" /></a>
-      <h1><a href="#">TP3: Marketplace</a></h1>
+      <h1><a href="#"><b>TP3: Marketplace</b></a></h1>
     </div>
     <nav class="site-navigation">
       <ul class="nav"><b>
@@ -32,11 +32,12 @@
             </div>
             <div class="modal-body">
               <div *ngFor="let cartItem of cartItems" class="card mb-3">
-                <!-- <img [src]="cartItem.item.image" alt="{{ cartItem.item.title }}"> -->
                 <div class="card-body">
+                  <img [src]="cartItem.item.image" alt="{{ cartItem.item.title }}" class="product-image">
                   <h5 class="card-title">{{ cartItem.item.title }}</h5>
                   <p class="card-text">Price: {{ cartItem.item.price | currency:'USD':'symbol':'1.2-2' }}</p>
                   <p class="card-text">Quantity: {{ cartItem.quantity }}</p>
+                  <br>
                   <div class="btn-group" role="group">
                     <button class="btn btn-success" (click)="increaseQuantity(cartItem)">+</button>
                     <button class="btn btn-warning" (click)="decreaseQuantity(cartItem)">-</button>

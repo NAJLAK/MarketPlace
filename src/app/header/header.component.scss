@@ -1,5 +1,5 @@
 a {
-    font-size: 16px;
+    //font-size: 16px;
     text-decoration: none;
     color: #000;
 }
@@ -80,4 +80,30 @@ span.badge {
     display: flex;
     align-items: center;
     margin-right: 10px;
+  }
+  .card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .product-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .product-image {
+    max-width: 50px; /* Set the maximum width of the image */
+    max-height: 50px; /* Set the maximum height of the image */
+    margin-right: 10px; /* Add some margin to the right of the image for spacing */
+    border: 1px solid #ddd; /* Add a border for better visibility */
+    border-radius: 4px; /* Add border-radius for rounded corners */
+  }
+  
+  .product-details {
+    flex-grow: 1;
+  }
+  .btn-group {
+    display: flex;
+    align-self: flex-end; /* Align the button group to the end (bottom) of the card */
   }

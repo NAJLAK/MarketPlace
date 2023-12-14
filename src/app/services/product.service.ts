@@ -12,7 +12,7 @@ export class ProductService {
       id: 1,
       title: "ADIDAR MAX",
       category: "ADULT",
-      image: "https://via.placeholder.com/500",
+      image: "assets/img1.jpg",
       description: "Lorem ipsum is placeholder text commonly used in the graphic.",
       price: 65.00,
       isSelected: false
@@ -21,7 +21,7 @@ export class ProductService {
       id: 2,
       title: "LEBRON MAX AIR",
       category: "KIDS",
-      image: "assets/LEBRON MAX AIR.jpeg",
+      image: "assets/img2.jpeg",
       description: "Lorem ipsum is placeholder text commonly used in the graphic.",
       price: 65.00,
       isSelected: false
@@ -31,7 +31,7 @@ export class ProductService {
       id: 3,
       title: "PUMA XS",
       category: "ADULT",
-      image: "https://via.placeholder.com/500",
+      image: "assets/img3.jpeg",
       description: "Lorem ipsum is placeholder text commonly used in the graphic.",
       price: 4.99,
       isSelected: false
@@ -40,7 +40,7 @@ export class ProductService {
       id: 4,
       title: "PUMA XS",
       category: "ADULT",
-      image: "https://via.placeholder.com/500",
+      image: "assets/img4.jpeg",
       description: "Lorem ipsum is placeholder text commonly used in the graphic.",
       price: 4.99,
       isSelected: false
