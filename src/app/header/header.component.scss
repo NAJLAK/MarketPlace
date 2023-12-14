@@ -1,4 +1,5 @@
 a {
+    font-size: 16px;
     text-decoration: none;
     color: #000;
 }
@@ -7,7 +8,8 @@ a {
     background-color: #fff;
     border-bottom: 1px solid #ccc;
     padding: .5em 1em;
-}
+    position: relative;
+  }
 
 .site-header::after {
     content: "";
@@ -20,9 +22,10 @@ a {
 }
 
 .site-identity h1 {
-    font-size: 1.5em;
+    font-size: 20px;
     margin: .7em 0 .3em 0;
     display: inline-block;
+    
 }
 
 .site-identity img {
@@ -59,3 +62,22 @@ span.badge {
         color: white;
     }
 }
+
+
+  
+  .modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .modal.show {
+    display: block;
+  }
+  .cart-item {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }

@@ -1,16 +1,52 @@
+<!-- header.component.html -->
 <header class="site-header">
     <div class="site-identity">
-        <a href="#"><img src="https://via.placeholder.com/200" alt="TP2 : Marketplace" /></a>
-        <h1><a href="#">TP3:Marketplace</a></h1>
+      <a href="#"><img src="../../assets/store.jpg" alt="TP2 : Marketplace" /></a>
+      <h1><a href="#">TP3: Marketplace</a></h1>
     </div>
     <nav class="site-navigation">
-        <ul class="nav">
-            <li><a href="#">Categories</a></li>
-            <li><a href="#">Nouveautés</a></li>
-            <li><a href="#">Contactez-nous</a></li>
-            <li><a href="#">
-                Panier <span class="badge" [ngClass]="{ 'badge-green': cartItems.length > 0, 'badge-yellow': cartItems.length === 0 }">{{ cartItems.length }}</span>
-            </a></li>
-        </ul>
+      <ul class="nav"><b>
+        <li><a href="#"><i class="fas fa-th-large"></i> Categories</a></li>
+        <li><a href="#"><i class="fas fa-star"></i> Nouveautés</a></li>
+        <li><a href="#"><i class="fas fa-envelope"></i> Contactez-nous</a></li>
+        <li>
+          <a href="#" (click)="toggleModal()">
+            <i class="fas fa-shopping-cart"></i> Panier
+            <span class="badge" [ngClass]="{ 'badge-green': cartItems.length > 0, 'badge-yellow': cartItems.length === 0 }">
+              {{ cartItems.length }}
+            </span>
+          </a>
+        </li></b>
+      </ul>
     </nav>
-</header>
+  
+    <!-- Modal -->
+    <div class="modal" [class.show]="showModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Produits dans le panier</h5>
+              <button type="button" class="close" (click)="toggleModal()" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div *ngFor="let cartItem of cartItems" class="card mb-3">
+                <!-- <img [src]="cartItem.item.image" alt="{{ cartItem.item.title }}"> -->
+                <div class="card-body">
+                  <h5 class="card-title">{{ cartItem.item.title }}</h5>
+                  <p class="card-text">Price: {{ cartItem.item.price | currency:'USD':'symbol':'1.2-2' }}</p>
+                  <p class="card-text">Quantity: {{ cartItem.quantity }}</p>
+                  <div class="btn-group" role="group">
+                    <button class="btn btn-success" (click)="increaseQuantity(cartItem)">+</button>
+                    <button class="btn btn-warning" (click)="decreaseQuantity(cartItem)">-</button>
+                    <button class="btn btn-danger" (click)="removeProduct(cartItem)">Remove</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </header>
+  

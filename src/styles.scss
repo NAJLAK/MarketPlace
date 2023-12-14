@@ -1,6 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+
 body {
     font-family: Helvetica;
     margin: 0;
-    background-color: #fdf1ec;
+    background-color: #f1f1f1;
 }
